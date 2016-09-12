@@ -3,3 +3,5 @@ app/*.map
 node_modules/
 typings/
 .idea/
+app/*/*.js
+app/*/*.map
