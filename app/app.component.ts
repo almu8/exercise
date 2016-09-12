@@ -11,6 +11,8 @@ import { UserService } from './user.service'
                'css/modal-window.css']
 })
 export class AppComponent {
+
+  selectedUser: User;
   users: User[];
 
   constructor(private userService: UserService){}
@@ -23,9 +25,8 @@ export class AppComponent {
     this.getHeroes();
   }
 
-  onClick(){
-    debugger;
-    alert("Users count - "+this.users.length);
+  selectUser(user: User){
+    this.selectedUser = user;
   }
 
 }
