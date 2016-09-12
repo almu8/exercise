@@ -5,7 +5,10 @@ import { UserService } from './user.service'
 
 @Component({
   selector: 'my-app',
-  templateUrl: "templates/app.component.html"
+  templateUrl: 'templates/app.component.html',
+  styleUrls:  ['css/app.component.css',
+               'css/bootstrap.css',
+               'css/modal-window.css']
 })
 export class AppComponent {
   users: User[];
@@ -21,6 +24,7 @@ export class AppComponent {
   }
 
   onClick(){
+    debugger;
     alert("Users count - "+this.users.length);
   }
 
