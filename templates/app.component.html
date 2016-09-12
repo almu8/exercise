@@ -20,7 +20,7 @@
                             <tr *ngFor="let user of users">
                                 <td>
                                     <img src="http://bootdey.com/img/Content/user_3.jpg" alt="">
-                                    <a href="#userInfo" (click)="selectUser(user)" class="user-link">{{user.name}}</a>
+                                    <a (click)="selectUser(user)" class="user-link">{{user.name}}</a>
                                     <span class="user-subhead">{{user.username}}</span>
                                 </td>
                                 <td>{{user.phone}}</td>
@@ -61,65 +61,8 @@
     </div>
 </div>
 
-
-
 <br>
 <br>
 <br>
 
-<div *ngIf="selectedUser" class="container">
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
-
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <h3 class="panel-title">{{selectedUser.name}}</h3>
-                </div>
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://bootdey.com/img/Content/user_3.jpg" class="img-circle img-responsive"> </div>
-
-                        <div class=" col-md-9 col-lg-9 ">
-                            <table class="table table-user-information">
-                                <tbody>
-                                <tr>
-                                    <td>Username:</td>
-                                    <td>{{selectedUser.username}}</td>
-                                </tr>
-                                <tr>
-                                    <td>Company:</td>
-                                    <td>{{selectedUser.company.name}}</td>
-                                </tr>
-                                <tr>
-                                    <td>Phone Number:</td>
-                                    <td>{{selectedUser.phone}}</td>
-                                </tr>
-                                <tr>
-                                    <td>Website:</td>
-                                    <td>{{selectedUser.website}}</td>
-                                </tr>
-                                <tr>
-                                    <td>Email:</td>
-                                    <td><a href="#">{{selectedUser.email}}</a></td>
-                                </tr>
-                                <tr>
-                                    <td>Home Address:</td>
-                                    <td>
-                                        {{selectedUser.address.city}}
-                                        <br>
-                                        {{selectedUser.address.street}}
-                                        <br>
-                                        {{selectedUser.address.suite}}
-                                    </td>
-                                </tr>
-
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<a name="userInfo"></a>
+<modal-window #modal ></modal-window>

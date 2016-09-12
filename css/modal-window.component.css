@@ -1,3 +1,25 @@
+.panel-footer {
+    height: 50px;
+}
+a.btn.btn-sm.btn-primary {
+    float: right;
+}
+.container {
+    margin: 0px !important;
+    padding: 0px;
+    width: 100%;
+}
+.panel.panel-info {
+    margin: 0px;
+}
+.row {
+    margin: 0px !important;
+}
+.col-xs-12.col-sm-12.col-md-6.col-lg-6.col-xs-offset-0.col-sm-offset-0.col-md-offset-3.col-lg-offset-3.toppad {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
 .user-row {
     margin-bottom: 14px;
 }

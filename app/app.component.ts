@@ -1,19 +1,21 @@
 import { Component , ViewChild} from '@angular/core';
 
 import { User } from "./models/user";
-import { UserService } from './user.service'
+import { UserService } from './user.service';
+import { ModalWindow } from './modal-window.component';
 
 @Component({
   selector: 'my-app',
   templateUrl: 'templates/app.component.html',
   styleUrls:  ['css/app.component.css',
-               'css/bootstrap.css',
-               'css/modal-window.css']
+               'css/bootstrap.css']
 })
 export class AppComponent {
 
-  selectedUser: User;
   users: User[];
+  
+  @ViewChild('modal')
+  modal: ModalWindow;
 
   constructor(private userService: UserService){}
 
@@ -26,7 +28,7 @@ export class AppComponent {
   }
 
   selectUser(user: User){
-    this.selectedUser = user;
+    this.modal.setUser(user);
   }
 
 }
