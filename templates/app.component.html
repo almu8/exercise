@@ -19,8 +19,8 @@
                             <tbody>
                             <tr *ngFor="let user of users">
                                 <td>
-                                    <img src="http://bootdey.com/img/Content/user_3.jpg" alt="">
-                                    <a (click)="selectUser(user)" class="user-link">{{user.name}}</a>
+                                    <img src="./templates/img/fake_user_icon.jpg" alt="">
+                                    <a routerLink='/user/{{user.id}}' class="user-link">{{user.name}}</a>
                                     <span class="user-subhead">{{user.username}}</span>
                                 </td>
                                 <td>{{user.phone}}</td>
@@ -65,4 +65,4 @@
 <br>
 <br>
 
-<modal-window #modal ></modal-window>
+<router-outlet></router-outlet>

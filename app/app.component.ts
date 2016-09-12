@@ -2,7 +2,6 @@ import { Component , ViewChild} from '@angular/core';
 
 import { User } from "./models/user";
 import { UserService } from './user.service';
-import { ModalWindow } from './modal-window.component';
 
 @Component({
   selector: 'my-app',
@@ -13,9 +12,6 @@ import { ModalWindow } from './modal-window.component';
 export class AppComponent {
 
   users: User[];
-  
-  @ViewChild('modal')
-  modal: ModalWindow;
 
   constructor(private userService: UserService){}
 
@@ -26,9 +22,4 @@ export class AppComponent {
   ngOnInit(): void {
     this.getHeroes();
   }
-
-  selectUser(user: User){
-    this.modal.setUser(user);
-  }
-
 }

@@ -1,6 +1,9 @@
 .panel-footer {
     height: 50px;
 }
+td.email {
+    color: rgb(95, 122, 187);
+}
 a.btn.btn-sm.btn-primary {
     float: right;
 }

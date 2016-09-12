@@ -25,7 +25,7 @@ export class UserService{
 
     //Show info about error
     private handleError(error: any): Promise<any> {
-        //Todo normal error info)
+        //Todo normal error window with message)
         console.error('An error occurred', error);
         return Promise.reject(error.message || error);
     }
